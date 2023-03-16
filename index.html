@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartDemo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="cart_functionality">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-3" id="category_list" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active" id="grocery_tab" data-bs-toggle="pill" data-bs-target="#grocery" type="button" role="tab" aria-controls="grocery" aria-selected="true">Grocery</button>
+                      <button class="nav-link" id="bakery_tab" data-bs-toggle="pill" data-bs-target="#bakery" type="button" role="tab" aria-controls="bakery" aria-selected="false">Bakery</button>
+                      <button class="nav-link" id="softdrinks_tab" data-bs-toggle="pill" data-bs-target="#softdrinks" type="button" role="tab" aria-controls="softdrinks" aria-selected="false">Soft Drinks</button>
+                      <button class="nav-link" id="cosmetics_tab" data-bs-toggle="pill" data-bs-target="#cosmetics" type="button" role="tab" aria-controls="cosmetics" aria-selected="false">Cosmetics</button>
+                    </div>
+                    <div class="tab-content" id="category-list-tabContent">
+                      <div class="tab-pane fade show active" id="grocery" role="tabpanel" aria-labelledby="grocery_tab">
+                            <div class="all_product_list">
+                                <ul class="d-flex products_ul">
+                                    <li> 
+                                        <p id="item_name_one"></p>
+                                        <p id="item_price_one" class="price"></p>
+                                        <p id="count_one"></p>
+                                        <button onclick="addtocart(0)">addtocart</button>
+                                    </li>
+                                    <li> 
+                                        <p id="item_name_two"></p>
+                                        <p id="item_price_two"></p>
+                                        <p id="count_two"></p>
+                                        <button onclick="addtocart(1)">addtocart</button>
+                                    </li>
+                                    <li> 
+                                        <p id="item_name_three"></p>
+                                        <p id="item_price_three"></p>
+                                        <p id="count_three"></p>
+                                        <button onclick="addtocart(2)">addtocart</button>
+                                    </li>
+                                    <li> 
+                                        <p id="item_name_four"></p>
+                                        <p id="item_price_four"></p>
+                                        <p id="count_four"></p>
+                                        <button onclick="addtocart(3)">addtocart</button>
+                                    </li>
+                                    <li> 
+                                        <p id="item_name_five"></p>
+                                        <p id="item_price_five"></p>
+                                        <p id="count_five"></p>
+                                        <button onclick="addtocart(4)">addtocart</button>
+                                    </li>
+                                </ul>
+
+
+                                <div class="total_count"></div>
+                          
+                          
+                            </div>
+
+
+                      </div>
+                      <div class="tab-pane fade" id="bakery" role="tabpanel" aria-labelledby="bakery_tab">...</div>
+                      <div class="tab-pane fade" id="softdrinks" role="tabpanel" aria-labelledby="softdrinks_tab">...</div>
+                      <div class="tab-pane fade" id="cosmetics" role="tabpanel" aria-labelledby="cosmetics_tab">...</div>
+                    </div>
+                  </div>
+            </div>
+        </div>          
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>
