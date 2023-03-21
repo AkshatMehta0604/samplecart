@@ -2,132 +2,174 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CartDemo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
+   
+
+
+    <!-- header start -->
+        <header>
+            <div class="total_div">
+                <div id="total_count"></div>
+                <div id="price_count"></div>
+            </div>
+        </header>
+    <!-- header End -->
 
     <section>
         <div class="container">
-            <div class="cart_functionality">
-                <div class="d-flex align-items-start">
-                    <div class="nav flex-column nav-pills me-3" id="category_list" role="tablist"
+            <div class="cart_items">
+                <div class="cart_item_conytainer d-flex align-items-start">
+                    <div class="category-list-tabs nav flex-column nav-pills" id="category_list" role="tablist"
                         aria-orientation="vertical">
                         <button class="nav-link active" id="grocery_tab" data-bs-toggle="pill" data-bs-target="#grocery"
-                            type="button" role="tab" aria-controls="grocery" aria-selected="true">Grocery</button>
+                            type="button" role="tab" aria-controls="grocery" aria-selected="true">
+                            Grocery
+                        </button>
                         <button class="nav-link" id="bakery_tab" data-bs-toggle="pill" data-bs-target="#bakery"
-                            type="button" role="tab" aria-controls="bakery" aria-selected="false">Bakery</button>
+                            type="button" role="tab" aria-controls="bakery" aria-selected="false">
+                            Bakery
+                        </button>
                         <button class="nav-link" id="softdrinks_tab" data-bs-toggle="pill" data-bs-target="#softdrinks"
-                            type="button" role="tab" aria-controls="softdrinks" aria-selected="false">Soft
-                            Drinks</button>
+                            type="button" role="tab" aria-controls="softdrinks" aria-selected="false">
+                            Soft Drinks
+                        </button>
                         <button class="nav-link" id="cosmetics_tab" data-bs-toggle="pill" data-bs-target="#cosmetics"
-                            type="button" role="tab" aria-controls="cosmetics" aria-selected="false">Cosmetics</button>
+                            type="button" role="tab" aria-controls="cosmetics" aria-selected="false">
+                            Cosmetics
+                        </button>
                     </div>
-                    <div class="tab-content" id="category-list-tabContent">
+                    <div class="category-list-tabContent tab-content" id="category-list-tabContent">
                         <div class="tab-pane fade show active" id="grocery" role="tabpanel"
                             aria-labelledby="grocery_tab">
                             <div class="all_product_list">
                                 <ul class="d-flex products_ul">
                                     <li>
                                         <p id="item_name_one"></p>
-                                        <p id="item_price_one" class="price"></p>
-                                        <p id="count_one"></p>
-                                        <button onclick="addtocart(0)">addtocart</button>
-                                        <button onclick="removecart(0)">removecart</button>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_one" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(0)">-</button>
+                                                <p id="count_one">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(0)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
                                         <p id="item_name_two"></p>
-                                        <p id="item_price_two"></p>
-                                        <p id="count_two"></p>
-                                        <button onclick="addtocart(1)">addtocart</button>
-                                        <button onclick="removecart(1)">removecart</button>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_two" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(1)">-</button>
+                                                <p id="count_two">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(1)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
                                         <p id="item_name_three"></p>
-                                        <p id="item_price_three"></p>
-                                        <p id="count_three"></p>
-                                        <button onclick="addtocart(2)">addtocart</button>
-                                        <button onclick="removecart(2)">removecart</button>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_three" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(2)">-</button>
+                                                <p id="count_three">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(2)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
                                         <p id="item_name_four"></p>
-                                        <p id="item_price_four"></p>
-                                        <p id="count_four"></p>
-                                        <button onclick="addtocart(3)">addtocart</button>
-                                        <button onclick="removecart(3)">removecart</button>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_four" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(3)">-</button>
+                                                <p id="count_four">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(3)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
                                         <p id="item_name_five"></p>
-                                        <p id="item_price_five"></p>
-                                        <p id="count_five"></p>
-                                        <button onclick="addtocart(4)">addtocart</button>
-                                        <button onclick="removecart(4)">removecart</button>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_five" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(4)">-</button>
+                                                <p id="count_five">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(4)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
-
-
-                                <div id="total_count"></div>
-                                <div id="price_count"></div>
-
-
                             </div>
-
-
                         </div>
                         <div class="tab-pane fade" id="bakery" role="tabpanel" aria-labelledby="bakery_tab">
                             <div class="all_product_list">
                                 <ul class="d-flex products_ul">
                                     <li>
-                                        <p id="item_name_one"></p>
-                                        <p id="item_price_one" class="price"></p>
-                                        <p id="count_one"></p>
-                                        <button onclick="addtocart(0)">addtocart</button>
+                                        <p id="item_name_six"></p>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_six" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(5)">-</button>
+                                                <p id="count_six">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(5)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_two"></p>
-                                        <p id="item_price_two"></p>
-                                        <p id="count_two"></p>
-                                        <button onclick="addtocart(1)">addtocart</button>
+                                        <p id="item_name_seven"></p>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_seven" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(6)">-</button>
+                                                <p id="count_seven">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(6)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_three"></p>
-                                        <p id="item_price_three"></p>
-                                        <p id="count_three"></p>
-                                        <button onclick="addtocart(2)">addtocart</button>
-                                    </li>
-                                    <li>
-                                        <p id="item_name_four"></p>
-                                        <p id="item_price_four"></p>
-                                        <p id="count_four"></p>
-                                        <button onclick="addtocart(3)">addtocart</button>
-                                    </li>
-                                    <li>
-                                        <p id="item_name_five"></p>
-                                        <p id="item_price_five"></p>
-                                        <p id="count_five"></p>
-                                        <button onclick="addtocart(4)">addtocart</button>
+                                        <p id="item_name_eight"></p>
+                                        <div class="product_price_count_container">
+                                            <div class="product_price">
+                                                <p id="item_price_eight" class="price"></p>
+                                            </div>
+                                            <div class="product_count">
+                                                <button class="product_count_button remove_count" onclick="removecart(7)">-</button>
+                                                <p id="count_eight">0</p>
+                                                <button class="product_count_button add_count" onclick="addtocart(7)">+</button>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
-
-
-                                <div id="total_count"></div>
-                                <div id="price_count"></div>
-
-
-
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="softdrinks" role="tabpanel" aria-labelledby="softdrinks_tab">...
+                        <div class="tab-pane fade" id="softdrinks" role="tabpanel" aria-labelledby="softdrinks_tab">
+                            ...
                         </div>
-                        <div class="tab-pane fade" id="cosmetics" role="tabpanel" aria-labelledby="cosmetics_tab">...
+                        <div class="tab-pane fade" id="cosmetics" role="tabpanel" aria-labelledby="cosmetics_tab">
+                            ...
                         </div>
                     </div>
                 </div>
@@ -135,11 +177,12 @@
         </div>
     </section>
 
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/custom.js"></script>
 </body>
 
