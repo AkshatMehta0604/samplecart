@@ -8,26 +8,47 @@
     <title>CartDemo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-   
+
 
 
     <!-- header start -->
-        <header>
-            <div class="total_div">
-                <div id="total_count"></div>
-                <div id="price_count"></div>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="header_container">
+                    <div class="logo_container">
+                        <a class="navbar-brand" href="#">
+                            <img src="/assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item_details">
+                        <div class="total_details">
+                            <div class="cart_logo"><i class="bi bi-cart2"></i></div>
+                            <div class="total_count">
+                                <div id="total_items">Add Some Items</div>
+                                <div id="price_count"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </nav>
+    </header>
     <!-- header End -->
 
-    <section>
+    <!-- product listing start -->
+    <section class="product_list_container">
         <div class="container">
             <div class="cart_items">
-                <div class="cart_item_conytainer d-flex align-items-start">
+                <div class="cart_item_container d-flex align-items-start">
                     <div class="category-list-tabs nav flex-column nav-pills" id="category_list" role="tablist"
                         aria-orientation="vertical">
                         <button class="nav-link active" id="grocery_tab" data-bs-toggle="pill" data-bs-target="#grocery"
@@ -53,67 +74,106 @@
                             <div class="all_product_list">
                                 <ul class="d-flex products_ul">
                                     <li>
-                                        <p id="item_name_one"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/g1.webp" type="image/webp">
+                                            <source srcset="/assets/images/g1.png" type="image/png">
+                                            <img src="/assets/images/g1.png" alt="Contact us" loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_one"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_one" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(0)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(0)">-</button>
                                                 <p id="count_one">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(0)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(0)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_two"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/g2.webp" type="image/webp">
+                                            <source srcset="/assets/images/g2.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/g2.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_two"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_two" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(1)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(1)">-</button>
                                                 <p id="count_two">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(1)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(1)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_three"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/g3.webp" type="image/webp">
+                                            <source srcset="/assets/images/g3.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/g3.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_three"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_three" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(2)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(2)">-</button>
                                                 <p id="count_three">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(2)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(2)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_four"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/g4.webp" type="image/webp">
+                                            <source srcset="/assets/images/g4.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/g4.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_four"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_four" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(3)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(3)">-</button>
                                                 <p id="count_four">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(3)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(3)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_five"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/g5.webp" type="image/webp">
+                                            <source srcset="/assets/images/g5.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/g5.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_five"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_five" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(4)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(4)">-</button>
                                                 <p id="count_five">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(4)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(4)">+</button>
                                             </div>
                                         </div>
                                     </li>
@@ -124,41 +184,65 @@
                             <div class="all_product_list">
                                 <ul class="d-flex products_ul">
                                     <li>
-                                        <p id="item_name_six"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/b1.webp" type="image/webp">
+                                            <source srcset="/assets/images/b1.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/b1.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_six"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_six" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(5)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(5)">-</button>
                                                 <p id="count_six">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(5)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(5)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_seven"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/b2.webp" type="image/webp">
+                                            <source srcset="/assets/images/b2.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/b2.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_seven"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_seven" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(6)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(6)">-</button>
                                                 <p id="count_seven">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(6)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(6)">+</button>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <p id="item_name_eight"></p>
+                                        <picture>
+                                            <source srcset="/assets/images/b3.webp" type="image/webp">
+                                            <source srcset="/assets/images/b3.png" type="image/png">
+                                            <img class="w-200" src="/assets/images/b3.png" alt="Contact us"
+                                                loading="lazy">
+                                        </picture>
+                                        <p class="item_name" id="item_name_eight"></p>
                                         <div class="product_price_count_container">
                                             <div class="product_price">
                                                 <p id="item_price_eight" class="price"></p>
                                             </div>
                                             <div class="product_count">
-                                                <button class="product_count_button remove_count" onclick="removecart(7)">-</button>
+                                                <button class="product_count_button remove_count"
+                                                    onclick="removecart(7)">-</button>
                                                 <p id="count_eight">0</p>
-                                                <button class="product_count_button add_count" onclick="addtocart(7)">+</button>
+                                                <button class="product_count_button add_count"
+                                                    onclick="addtocart(7)">+</button>
                                             </div>
                                         </div>
                                     </li>
@@ -176,13 +260,16 @@
             </div>
         </div>
     </section>
+    <!-- product listing End -->
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/custom.js"></script>
 </body>
 
