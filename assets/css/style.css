@@ -196,7 +196,7 @@
     margin-bottom: 0;
 }
 
-
+/* product listing css end */
 
 
 
@@ -222,7 +222,17 @@
 
 
 /* Resposive css start  */
-
+@media only screen and (max-width: 1199px) {
+    .products_ul li{
+        width: 30%;
+        min-width: 230px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .products_ul li{
+        width: 45%;
+    }
+}
 @media only screen and (max-width: 767px) {
     .cart_item_container {
         flex-direction: column;
@@ -238,6 +248,7 @@
     }
     .cart_items .cart_item_container .category-list-tabs .nav-link{
         width: 50%;
+        text-align: center;
     }
     .products_ul {
         justify-content: center;
