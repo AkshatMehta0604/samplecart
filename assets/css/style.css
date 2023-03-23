@@ -7,12 +7,19 @@
 }
 .site-header {
     padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 .site-header .header_container .logo_container .navbar-brand {
     display: inline-block;
     width: 100px;
     border: none;
     outline: none;
+    margin-right: 0;
+    padding: 0;
 }
 
 .site-header .header_container .logo_container .navbar-brand img {
@@ -49,16 +56,18 @@
     font-weight: 700;
     text-align: center;
 }
-
-
-/* header Css end */
+/* header css end */
 
 /* Product listing css */
 
 .product_list_container{
     padding: 50px 0;
+    background: rgba(236, 236, 236, 0.5);
 }
 
+.cart_items .cart_item_container{
+    column-gap: 20px;
+}
 .cart_items .cart_item_container .category-list-tabs {
     width: 20%;
     padding: 0 10px;
@@ -71,6 +80,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    word-break: break-all;
 }
 
 .cart_items .cart_item_container .category-list-tabs .nav-link:hover {
@@ -94,6 +104,7 @@
     justify-content: flex-start;
     column-gap: 15px;
     row-gap: 15px;
+    padding-left: 0;
 }
 
 .products_ul li {
@@ -197,10 +208,13 @@
 .swal2-styled.swal2-confirm{
     border: none !important;
     outline: none !important;
+    box-shadow: none !important;
     background-color: #1492C8 !important;
     padding: 10px 40px;
 }
-
+.swal2-styled.swal2-confirm:hover{
+    background-color: #ff9900 !important;
+}
 
 
 
@@ -209,10 +223,34 @@
 
 /* Resposive css start  */
 
-
+@media only screen and (max-width: 767px) {
+    .cart_item_container {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+        row-gap: 30px;
+    }
+    .cart_items .cart_item_container .category-list-tabs,.cart_items .cart_item_container .category-list-tabContent{
+        width: 100%;
+    }
+    .cart_items .cart_item_container .category-list-tabs{
+        flex-direction: row !important;
+    }
+    .cart_items .cart_item_container .category-list-tabs .nav-link{
+        width: 50%;
+    }
+    .products_ul {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .site-header .header_container{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
 
 
 
 
 /* Resposive css End */
-

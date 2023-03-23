@@ -1,3 +1,4 @@
+// all products array
 let all_products = [
   {
     item_id: "1",
@@ -40,41 +41,35 @@ let all_products = [
     item_price: 200,
   },
 ];
+// all products array end
 
+// Display every item on webpage
 document.getElementById("item_name_one").innerHTML = all_products[0].item_name;
-document.getElementById("item_price_one").innerHTML =
-  "₹" + all_products[0].item_price;
+document.getElementById("item_price_one").innerHTML = "₹" + all_products[0].item_price;
 
 document.getElementById("item_name_two").innerHTML = all_products[1].item_name;
-document.getElementById("item_price_two").innerHTML =
-  "₹" + all_products[1].item_price;
+document.getElementById("item_price_two").innerHTML = "₹" + all_products[1].item_price;
 
-document.getElementById("item_name_three").innerHTML =
-  all_products[2].item_name;
-document.getElementById("item_price_three").innerHTML =
-  "₹" + all_products[2].item_price;
+document.getElementById("item_name_three").innerHTML = all_products[2].item_name;
+document.getElementById("item_price_three").innerHTML = "₹" + all_products[2].item_price;
 
 document.getElementById("item_name_four").innerHTML = all_products[3].item_name;
-document.getElementById("item_price_four").innerHTML =
-  "₹" + all_products[3].item_price;
+document.getElementById("item_price_four").innerHTML = "₹" + all_products[3].item_price;
 
 document.getElementById("item_name_five").innerHTML = all_products[4].item_name;
-document.getElementById("item_price_five").innerHTML =
-  "₹" + all_products[4].item_price;
+document.getElementById("item_price_five").innerHTML = "₹" + all_products[4].item_price;
 
 document.getElementById("item_name_six").innerHTML = all_products[5].item_name;
-document.getElementById("item_price_six").innerHTML =
-  "₹" + all_products[5].item_price;
+document.getElementById("item_price_six").innerHTML = "₹" + all_products[5].item_price;
 
-document.getElementById("item_name_seven").innerHTML =
-  all_products[6].item_name;
-document.getElementById("item_price_seven").innerHTML =
-  "₹" + all_products[6].item_price;
+document.getElementById("item_name_seven").innerHTML = all_products[6].item_name;
+document.getElementById("item_price_seven").innerHTML = "₹" + all_products[6].item_price;
 
-document.getElementById("item_name_eight").innerHTML =
-  all_products[7].item_name;
-document.getElementById("item_price_eight").innerHTML =
-  "₹" + all_products[7].item_price;
+document.getElementById("item_name_eight").innerHTML = all_products[7].item_name;
+document.getElementById("item_price_eight").innerHTML = "₹" + all_products[7].item_price;
+
+// Display every item on webpage end
+
 
 var c1 = 0,
   c2 = 0,
@@ -135,6 +130,7 @@ function addtocart(a) {
   document.getElementById("total_items").innerHTML = itemCount + " items";
   document.getElementById("price_count").innerHTML = "₹" + priceTotal;
 }
+//js for add to cart end
 
 // js for remove cart
 function removecart(a) {
@@ -184,3 +180,4 @@ function removecart(a) {
   document.getElementById("total_items").innerHTML = itemCount + " items";
   document.getElementById("price_count").innerHTML = "₹" + priceTotal;
 }
+// js for remove cart end
